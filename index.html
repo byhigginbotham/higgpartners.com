@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brad Higginbotham | Banking Systems Product Manager & Integration Specialist</title>
+    <meta name="description" content="Banking systems product manager specializing in multi-platform coordination and complex integration planning for financial institutions.">
+    
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #0066cc;
+            --accent-light: #0077b5;
+            --text: #333333;
+            --text-light: #666666;
+            --background: #ffffff;
+            --section-bg: #f8f9fa;
+            --border: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--background);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        
+        .hero .title {
+            font-size: 1.4em;
+            color: #a8dadc;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        
+        .hero .tagline {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-secondary:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 2.2em;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        /* About Section */
+        .about-content {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: var(--text);
+            max-width: 800px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .expertise-card {
+            background: var(--section-bg);
+            padding: 35px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-light);
+        }
+        
+        .expertise-card h3 {
+            font-size: 1.3em;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .expertise-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .expertise-card li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .expertise-card li::before {
+            content: '▸';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Experience Timeline */
+        .experience-item {
+            background: var(--section-bg);
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transform: translateX(5px);
+        }
+        
+        .experience-header {
+            margin-bottom: 15px;
+        }
+        
+        .experience-title {
+            font-size: 1.4em;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .experience-company {
+            color: var(--accent);
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .experience-date {
+            color: var(--text-light);
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+        
+        .experience-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .contact-section .section-title {
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 50px auto 0;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #a8dadc;
+            font-weight: 500;
+        }
+        
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .contact-card a:hover {
+            color: #a8dadc;
+        }
+        
+        .contact-card p {
+            color: white;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px 50px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .title {
+                font-size: 1.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1em;
+            }
+            
+            .container {
+                padding: 50px 20px;
+            }
+            
+            .section {
+                margin-bottom: 50px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Brad Higginbotham</h1>
+            <p class="title">Banking Systems Product Manager & Integration Specialist</p>
+            <p class="tagline">Helping financial institutions navigate complex technology transformations and multi-platform integrations</p>
+            <div class="cta-buttons">
+                <a href="mailto:brad@higgpartners.com" class="btn btn-primary">Get in Touch</a>
+                <a href="https://linkedin.com/in/higgpartners" target="_blank" class="btn btn-secondary">View LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>With over a decade of banking technology experience, I specialize in <span class="highlight">managing complex system transformations</span> and coordinating multi-platform product initiatives for financial institutions.</p>
+                
+                <p>Currently managing loan accounting systems while planning enterprise integration initiatives. My work bridges three critical areas: deep banking domain expertise, technical systems knowledge, and product management discipline.</p>
+                
+                <p>I've led implementations serving 250+ users, managed multi-million dollar portfolios, and coordinated vendor relationships for mission-critical banking systems. My experience spans the full banking technology stack—from loan origination through servicing to compliance reporting.</p>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="section">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>Product Management</h3>
+                    <ul>
+                        <li>Multi-platform coordination</li>
+                        <li>Agile pod leadership</li>
+                        <li>Vendor relationship management</li>
+                        <li>Stakeholder alignment</li>
+                        <li>Product roadmap development</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <h3>Banking Technology</h3>
+                    <ul>
+                        <li>nCino platform implementations</li>
+                        <li>Loan origination systems</li>
+                        <li>Core banking platforms</li>
+                        <li>Salesforce administration</li>
+                        <li>Data integration architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <h3>System Integration</h3>
+                    <ul>
+                        <li>Platform migration planning</li>
+                        <li>Data mapping & validation</li>
+                        <li>Gap analysis</li>
+                        <li>Requirements documentation</li>
+                        <li>Cross-system coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section">
+            <h2 class="section-title">Experience Highlights</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Product Manager - Banking Systems Integration</h3>
+                    <p class="experience-company">First Citizens Bank & Trust Co.</p>
+                    <p class="experience-date">November 2024 - Present | Remote</p>
+                </div>
+                <p class="experience-description">
+                    Managing loan accounting systems portfolio while leading integration planning workstreams. Coordinating vendor relationships, security optimization, and cross-functional teams for enterprise system consolidation initiatives.
+                </p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Product Manager</h3>
+                    <p class="experience-company">NDS Systems</p>
+                    <p class="experience-date">May 2022 - April 2024 | Remote</p>
+                </div>
+                <p class="experience-description">
+                    Led product strategy for Cync Loan Origination System serving commercial lenders nationwide. Developed reporting capabilities, created workflows for regulatory compliance, and aligned product roadmap with market demands.
+                </p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">VP, Financial Systems Manager</h3>
+                    <p class="experience-company">ServisFirst Bank</p>
+                    <p class="experience-date">March 2013 - July 2019 | Birmingham, AL</p>
+                </div>
+                <p class="experience-description">
+                    Led Salesforce and nCino platform implementations. Successfully launched nCino Commercial Lending Solution on time and within budget, trained 250+ employees across 20 branches, and built reporting infrastructure supporting IPO preparation.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title">Let's Connect</h2>
+        <p style="font-size: 1.15em; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Open to consulting opportunities and full-time strategic leadership roles in banking technology and financial systems.
+        </p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <a href="mailto:brad@higgpartners.com">brad@higgpartners.com</a>
+            </div>
+            <div class="contact-card">
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/higgpartners" target="_blank">linkedin.com/in/higgpartners</a>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Birmingham, Alabama</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Brad Higginbotham. All rights reserved.</p>
+        <p style="margin-top: 10px;">Birmingham, Alabama</p>
+    </footer>
+</body>
+</html>

@@ -1,558 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad Higginbotham | Lending Technology Advisor | Principal, Higg Partners</title>
-    <meta name="description" content="Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.">
-    <meta property="og:title" content="Brad Higginbotham | Lending Technology Advisor | Principal, Higg Partners">
-    <meta property="og:description" content="Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.">
-    
-    <style>
-        :root {
-            --primary: #1a1a2e;
-            --accent: #0066cc;
-            --accent-light: #0077b5;
-            --text: #333333;
-            --text-light: #666666;
-            --background: #ffffff;
-            --section-bg: #f8f9fa;
-            --border: #e0e0e0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--background);
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 100px 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-        
-        .hero .title {
-            font-size: 1.4em;
-            color: #a8dadc;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-        
-        .hero .tagline {
-            font-size: 1.2em;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 14px 32px;
-            font-size: 1em;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: 2px solid;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-            border-color: white;
-        }
-        
-        .btn-primary:hover {
-            background: transparent;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .btn-secondary:hover {
-            border-color: white;
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-        
-        .section {
-            margin-bottom: 80px;
-        }
-        
-        .section-title {
-            font-size: 2.2em;
-            color: var(--primary);
-            margin-bottom: 30px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        
-        /* About Section */
-        .about-content {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: var(--text);
-            max-width: 800px;
-        }
-        
-        .about-content p {
-            margin-bottom: 20px;
-        }
-        
-        .highlight {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        
-        /* Differentiator Grid */
-        .differentiator-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .differentiator-text {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-top: 10px;
-        }
-
-        /* Expertise Grid */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .expertise-card {
-            background: var(--section-bg);
-            padding: 35px 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent-light);
-        }
-        
-        .expertise-card h3 {
-            font-size: 1.3em;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .expertise-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .expertise-card li {
-            padding: 8px 0;
-            color: var(--text-light);
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .expertise-card li::before {
-            content: '▸';
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* Experience Timeline */
-        .experience-item {
-            background: var(--section-bg);
-            padding: 35px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--accent);
-            transition: all 0.3s ease;
-        }
-        
-        .experience-item:hover {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transform: translateX(5px);
-        }
-        
-        .experience-header {
-            margin-bottom: 15px;
-        }
-        
-        .experience-title {
-            font-size: 1.4em;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .experience-company {
-            color: var(--accent);
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        
-        .experience-date {
-            color: var(--text-light);
-            font-size: 0.95em;
-            margin-top: 5px;
-        }
-        
-        .experience-description {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-top: 15px;
-        }
-        
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .contact-section .section-title {
-            color: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 900px;
-            margin: 50px auto 0;
-        }
-        
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        
-        .contact-card h3 {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: #a8dadc;
-            font-weight: 500;
-        }
-        
-        .contact-card a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        
-        .contact-card a:hover {
-            color: #a8dadc;
-        }
-        
-        .contact-card p {
-            color: white;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px 50px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            
-            .hero .title {
-                font-size: 1.2em;
-            }
-            
-            .hero .tagline {
-                font-size: 1.1em;
-            }
-            
-            .container {
-                padding: 50px 20px;
-            }
-            
-            .section {
-                margin-bottom: 50px;
-            }
-            
-            .section-title {
-                font-size: 1.8em;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-            
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Higg Partners — Lending Technology Advisory</title>
+  <meta name="description" content="Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.">
+  <meta property="og:title" content="Higg Partners — Lending Technology Advisory">
+  <meta property="og:description" content="Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Brad Higginbotham</h1>
-            <p class="title">Lending Technology Advisor | Principal, Higg Partners</p>
-            <p class="tagline">Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.</p>
-            <div class="cta-buttons">
-                <a href="mailto:brad@higgpartners.com" class="btn btn-primary">Get in Touch</a>
-                <a href="https://linkedin.com/in/higgpartners" target="_blank" class="btn btn-secondary">View LinkedIn</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <div class="container">
-        <section class="section">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <p>I have spent my career at the intersection of banking operations and lending technology. I started as a practitioner inside banks, and now I lead product management across the systems that make commercial lending run.</p>
-
-                <p>Through Higg Partners, I bring a combination most advisors cannot offer: I have been the bank customer, the implementation lead, and the product builder — sometimes all three at once.</p>
-            </div>
-        </section>
-
-        <!-- What Makes This Different -->
-        <section class="section">
-            <h2 class="section-title">What Makes This Different</h2>
-            <div class="differentiator-grid">
-                <div class="expertise-card">
-                    <h3>First nCino and TransUnion Integration</h3>
-                    <p class="differentiator-text">I drove the first integration between nCino and TransUnion for consumer credit reporting as the bank customer leading that implementation at ServisFirst Bank. I later designed the same capability at Cync Software across all major credit bureaus, this time from the vendor side.</p>
-                </div>
-                <div class="expertise-card">
-                    <h3>Three-System Loan Document Automation</h3>
-                    <p class="differentiator-text">I architected an end-to-end loan document automation workflow spanning nCino as the origination layer, a middle-tier server for processing, and a document management platform for intake and sorting. Three distinct systems, one automated pipeline.</p>
-                </div>
-                <div class="expertise-card">
-                    <h3>Operational Implementation Advisory</h3>
-                    <p class="differentiator-text">Most consultants hand off and leave. I advise on what happens after go-live — how to build the support team and FTE model needed to sustain a new system, and how to migrate intentionally from paper-based or legacy origination environments without losing institutional knowledge.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Expertise Section -->
-        <section class="section">
-            <h2 class="section-title">Core Expertise</h2>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h3>Product Management</h3>
-                    <ul>
-                        <li>Multi-platform loan accounting system management</li>
-                        <li>Post-acquisition system integration and consolidation</li>
-                        <li>Agile pod leadership and sprint execution</li>
-                        <li>Vendor relationship management and coordination</li>
-                        <li>Stakeholder alignment across product, technology, and operations chains</li>
-                        <li>Executive-facing deliverables and governance frameworks</li>
-                    </ul>
-                </div>
-
-                <div class="expertise-card">
-                    <h3>Banking Technology</h3>
-                    <ul>
-                        <li>nCino platform implementation and optimization</li>
-                        <li>Loan origination and loan accounting systems</li>
-                        <li>LoanIQ consolidation and platform migration</li>
-                        <li>Credit bureau integrations (TransUnion, Equifax, Experian)</li>
-                        <li>Salesforce administration and configuration</li>
-                        <li>Document management system integration</li>
-                    </ul>
-                </div>
-
-                <div class="expertise-card">
-                    <h3>System Integration</h3>
-                    <ul>
-                        <li>End-to-end integration architecture across multiple platforms</li>
-                        <li>Platform migration planning and gap analysis</li>
-                        <li>Data mapping and validation</li>
-                        <li>Cross-system workflow automation</li>
-                        <li>Three-system document pipeline design</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="section">
-            <h2 class="section-title">Experience Highlights</h2>
-            
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3 class="experience-title">Product Manager</h3>
-                    <p class="experience-company">First Citizens Bank (SVB Division)</p>
-                    <p class="experience-date">November 2024 - Present | Remote | Contract via Empiric Solutions</p>
-                </div>
-                <p class="experience-description">
-                    Lead product management across four loan accounting platforms and two strategic workstreams focused on system integration and platform modernization following a major acquisition. Serve as the primary product voice across a three-chain matrix spanning product, technology, and operations.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3 class="experience-title">Product Manager</h3>
-                    <p class="experience-company">NDS Systems / Cync Software</p>
-                    <p class="experience-date">May 2022 - April 2024 | Remote</p>
-                </div>
-                <p class="experience-description">
-                    Led product strategy for the Cync Loan Origination System serving commercial lenders nationwide. Designed credit bureau integrations across all major bureaus. Developed reporting capabilities and aligned product roadmap with market demands.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3 class="experience-title">VP, Financial Systems Manager</h3>
-                    <p class="experience-company">ServisFirst Bank</p>
-                    <p class="experience-date">March 2013 - July 2019 | Birmingham, Alabama</p>
-                </div>
-                <p class="experience-description">
-                    Led Salesforce and nCino platform implementations. Drove the first integration between nCino and TransUnion for consumer credit reporting. Architected a three-system loan document automation workflow. Successfully launched nCino Commercial Lending Solution on time and within budget, trained 250 employees across 20 branches, and built reporting infrastructure supporting the bank's IPO in 2014.
-                </p>
-            </div>
-        </section>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/logo.svg" alt="Higg Partners" width="40" height="40">
+        <span class="nav__logo-text">Higg Partners</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="book.html" class="nav__cta">Book a Call</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-links').classList.toggle('open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2 class="section-title">Let's Connect</h2>
-        <p style="font-size: 1.15em; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
-            Open to consulting engagements and full-time strategic leadership roles in banking technology, lending systems, and financial services product management.
-        </p>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3>Email</h3>
-                <a href="mailto:brad@higgpartners.com">brad@higgpartners.com</a>
-            </div>
-            <div class="contact-card">
-                <h3>LinkedIn</h3>
-                <a href="https://linkedin.com/in/higgpartners" target="_blank">linkedin.com/in/higgpartners</a>
-            </div>
-            <div class="contact-card">
-                <h3>Location</h3>
-                <p>Birmingham, Alabama</p>
-            </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__subtitle">Lending Technology Advisory</p>
+        <h1>Brad Higginbotham</h1>
+        <p>Advising financial institutions and fintech companies on loan system modernization, platform consolidation, and commercial lending operations.</p>
+        <a href="#services" class="btn btn--primary">What I Do</a>
+        <a href="book.html" class="btn btn--outline" style="margin-left: 1rem;">Schedule a Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section section--light">
+    <div class="container">
+      <h2>Services</h2>
+      <p>Focused advisory for banks and fintechs navigating lending technology decisions.</p>
+      <div class="grid grid--2" style="margin-top: 3rem;">
+        <div class="card">
+          <span class="card__label">01</span>
+          <h3>Operations Strategy</h3>
+          <p>Post-go-live support models, FTE planning, and migration strategy for moving off legacy origination environments without losing institutional knowledge.</p>
         </div>
-    </section>
+        <div class="card">
+          <span class="card__label">02</span>
+          <h3>Technology Advisory</h3>
+          <p>Platform evaluation, integration architecture, and system consolidation for loan origination, loan accounting, and credit reporting workflows.</p>
+        </div>
+        <div class="card">
+          <span class="card__label">03</span>
+          <h3>Change Management</h3>
+          <p>Stakeholder alignment, training programs, and governance frameworks for enterprise lending platform rollouts across distributed branch networks.</p>
+        </div>
+        <div class="card">
+          <span class="card__label">04</span>
+          <h3>Vendor &amp; Partner Management</h3>
+          <p>Vendor evaluation, contract coordination, and cross-platform relationship management for multi-system lending technology stacks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Brad Higginbotham. All rights reserved.</p>
-        <p style="margin-top: 10px;">Birmingham, Alabama</p>
-    </footer>
+  <!-- What Makes This Different -->
+  <section class="section section--navy">
+    <div class="container">
+      <h2>What Makes This Different</h2>
+      <p>Most advisors have been on one side of the table. I have been the bank customer, the implementation lead, and the product builder.</p>
+      <div class="grid grid--3" style="margin-top: 3rem;">
+        <div class="diff-card">
+          <h3>First nCino &amp; TransUnion Integration</h3>
+          <p>I drove the first integration between nCino and TransUnion for consumer credit reporting as the bank customer at ServisFirst Bank. I later designed the same capability at Cync Software across all major credit bureaus, this time from the vendor side.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Three-System Document Automation</h3>
+          <p>I architected an end-to-end loan document automation workflow spanning nCino as the origination layer, a middle-tier server for processing, and a document management platform for intake and sorting. Three distinct systems, one automated pipeline.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Operational Implementation</h3>
+          <p>Most consultants hand off and leave. I advise on what happens after go-live: how to build the support team and FTE model to sustain a new system, and how to migrate intentionally from paper-based environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section--light">
+    <div class="container">
+      <div style="max-width: 640px;">
+        <h2>About</h2>
+        <p>I have spent my career at the intersection of banking operations and lending technology. I started as a practitioner inside banks, and now I lead product management across the systems that make commercial lending run.</p>
+        <p>Through Higg Partners, I bring a combination most advisors cannot offer: I have been the bank customer, the implementation lead, and the product builder — sometimes all three at once.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Expertise -->
+  <section class="section section--navy">
+    <div class="container">
+      <h2>Core Expertise</h2>
+      <div class="grid grid--3" style="margin-top: 3rem;">
+        <div class="expertise-card">
+          <h3>Product Management</h3>
+          <ul>
+            <li>Multi-platform loan accounting system management</li>
+            <li>Post-acquisition system integration and consolidation</li>
+            <li>Agile pod leadership and sprint execution</li>
+            <li>Vendor relationship management and coordination</li>
+            <li>Stakeholder alignment across product, technology, and operations</li>
+            <li>Executive-facing deliverables and governance frameworks</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h3>Banking Technology</h3>
+          <ul>
+            <li>nCino platform implementation and optimization</li>
+            <li>Loan origination and loan accounting systems</li>
+            <li>LoanIQ consolidation and platform migration</li>
+            <li>Credit bureau integrations (TransUnion, Equifax, Experian)</li>
+            <li>Salesforce administration and configuration</li>
+            <li>Document management system integration</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h3>System Integration</h3>
+          <ul>
+            <li>End-to-end integration architecture across multiple platforms</li>
+            <li>Platform migration planning and gap analysis</li>
+            <li>Data mapping and validation</li>
+            <li>Cross-system workflow automation</li>
+            <li>Three-system document pipeline design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section section--light">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <h3>Product Manager</h3>
+        <p class="exp-company">First Citizens Bank (SVB Division)</p>
+        <p class="exp-date">November 2024 - Present | Remote | Contract via Empiric Solutions</p>
+        <p class="exp-desc">Lead product management across four loan accounting platforms and two strategic workstreams focused on system integration and platform modernization following a major acquisition. Serve as the primary product voice across a three-chain matrix spanning product, technology, and operations.</p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Product Manager</h3>
+        <p class="exp-company">NDS Systems / Cync Software</p>
+        <p class="exp-date">May 2022 - April 2024 | Remote</p>
+        <p class="exp-desc">Led product strategy for the Cync Loan Origination System serving commercial lenders nationwide. Designed credit bureau integrations across all major bureaus. Developed reporting capabilities and aligned product roadmap with market demands.</p>
+      </div>
+
+      <div class="experience-item">
+        <h3>VP, Financial Systems Manager</h3>
+        <p class="exp-company">ServisFirst Bank</p>
+        <p class="exp-date">March 2013 - July 2019 | Birmingham, Alabama</p>
+        <p class="exp-desc">Led Salesforce and nCino platform implementations. Drove the first integration between nCino and TransUnion for consumer credit reporting. Architected a three-system loan document automation workflow. Launched nCino Commercial Lending Solution on time and within budget, trained 250 employees across 20 branches, and built reporting infrastructure supporting the bank's IPO in 2014.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--navy">
+    <div class="container" style="text-align: center;">
+      <h2>Get in Touch</h2>
+      <p style="margin-left: auto; margin-right: auto; text-align: center;">Open to consulting engagements and advisory work in banking technology, lending systems, and financial services product management.</p>
+      <div style="margin-top: 2rem;">
+        <p style="margin-bottom: 0.5rem; color: #FFFFFF; font-weight: 700; font-size: 1rem; text-align: center; margin-left: auto; margin-right: auto;">Email</p>
+        <p style="text-align: center; margin-left: auto; margin-right: auto;"><a href="mailto:brad@higgpartners.com" style="color: #8FA8BC;">brad@higgpartners.com</a></p>
+        <p style="margin-bottom: 0.5rem; color: #FFFFFF; font-weight: 700; font-size: 1rem; text-align: center; margin-left: auto; margin-right: auto;">LinkedIn</p>
+        <p style="text-align: center; margin-left: auto; margin-right: auto;"><a href="https://linkedin.com/in/higgpartners" target="_blank" style="color: #8FA8BC;">linkedin.com/in/higgpartners</a></p>
+        <p style="margin-top: 2rem; text-align: center; margin-left: auto; margin-right: auto;"><a href="book.html" class="btn btn--primary">Book a Call</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">Higg Partners</div>
+          <p class="footer__tagline">Lending technology advisory for financial institutions and fintech companies.</p>
+        </div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="book.html">Book</a></li>
+        </ul>
+      </div>
+      <p class="footer__copy">&copy; 2026 Higg Partners. All rights reserved. Birmingham, Alabama.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

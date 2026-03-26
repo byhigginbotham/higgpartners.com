@@ -1,0 +1,614 @@
+/* ============================================
+   HIGG PARTNERS — Brand Stylesheet
+   Brand Spec Colors:
+     Navy:        #1A2744
+     Slate Gray:  #6F88A0
+     Light Slate: #8FA8BC
+     White:       #FFFFFF
+   Font: Inter (Google Fonts)
+   Typography:
+     Headlines: Inter Bold 700, letter-spacing +150 (0.15em)
+     Body:      Inter Regular 400
+   Design: Clean, institutional, minimal.
+     No gradients, no drop shadows, no decorative elements.
+     Generous whitespace. Hierarchy through size, weight, opacity.
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1A2744;
+  background-color: #FFFFFF;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #1A2744;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #6F88A0;
+  margin-bottom: 1.5rem;
+  max-width: 42em;
+}
+
+a {
+  color: #1A2744;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #6F88A0;
+}
+
+/* --- Layout --- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section--navy {
+  background-color: #1A2744;
+}
+
+.section--navy h1,
+.section--navy h2,
+.section--navy h3 {
+  color: #FFFFFF;
+}
+
+.section--navy p {
+  color: #8FA8BC;
+}
+
+.section--light {
+  background-color: #FFFFFF;
+}
+
+/* --- Navigation --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(111, 136, 160, 0.15);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav__logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__logo-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1A2744;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav__links a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6F88A0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: #1A2744;
+}
+
+.nav__cta {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+  background-color: #1A2744;
+  padding: 0.625rem 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav__cta:hover {
+  background-color: #6F88A0;
+  color: #FFFFFF !important;
+}
+
+/* Mobile nav toggle */
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1A2744;
+  margin: 5px 0;
+  transition: all 0.2s ease;
+}
+
+/* --- Hero --- */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 72px; /* nav offset */
+  background-color: #1A2744;
+}
+
+.hero__content {
+  max-width: 720px;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .hero__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #8FA8BC;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  color: #8FA8BC;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.875rem 2rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary {
+  background-color: #FFFFFF;
+  color: #1A2744;
+}
+
+.btn--primary:hover {
+  background-color: #8FA8BC;
+  color: #FFFFFF;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn--outline:hover {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn--dark {
+  background-color: #1A2744;
+  color: #FFFFFF;
+}
+
+.btn--dark:hover {
+  background-color: #6F88A0;
+  color: #FFFFFF;
+}
+
+/* --- Cards / Services Grid --- */
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  padding: 2.5rem;
+  border: 1px solid rgba(111, 136, 160, 0.15);
+}
+
+.card__label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6F88A0;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #6F88A0;
+}
+
+/* --- Differentiator Cards --- */
+.diff-card {
+  padding: 2rem 2.5rem;
+  border-left: 3px solid #6F88A0;
+}
+
+.diff-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.diff-card p {
+  font-size: 1rem;
+  color: #6F88A0;
+  margin-bottom: 0;
+}
+
+/* --- Experience Items --- */
+.experience-item {
+  padding: 2rem 2.5rem;
+  border-left: 3px solid #6F88A0;
+  margin-bottom: 1.5rem;
+}
+
+.experience-item h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .exp-company {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6F88A0;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .exp-date {
+  font-size: 0.875rem;
+  color: #8FA8BC;
+  margin-bottom: 0.75rem;
+}
+
+.experience-item .exp-desc {
+  font-size: 1rem;
+  color: #6F88A0;
+  margin-bottom: 0;
+}
+
+/* --- Expertise Grid --- */
+.expertise-card {
+  padding: 2.5rem;
+  border: 1px solid rgba(111, 136, 160, 0.15);
+}
+
+.expertise-card h3 {
+  margin-bottom: 1rem;
+}
+
+.expertise-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-card li {
+  padding: 0.375rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: #6F88A0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.expertise-card li::before {
+  content: '\25B8';
+  color: #6F88A0;
+  position: absolute;
+  left: 0;
+}
+
+/* --- Booking / Embed Page --- */
+.booking-section {
+  padding-top: 72px; /* nav offset */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-header {
+  background-color: #1A2744;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.booking-header h1 {
+  color: #FFFFFF;
+}
+
+.booking-header p {
+  color: #8FA8BC;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.booking-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.booking-body p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.125rem 3rem;
+  background-color: #1A2744;
+  color: #FFFFFF;
+  border: 2px solid #1A2744;
+  transition: all 0.2s ease;
+}
+
+.booking-btn:hover {
+  background-color: transparent;
+  color: #1A2744;
+}
+
+.booking-note {
+  font-size: 0.875rem;
+  color: #8FA8BC;
+  margin-top: 2rem;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #1A2744;
+  padding: 4rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer__brand {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+
+.footer__tagline {
+  font-size: 0.875rem;
+  color: #8FA8BC;
+  max-width: 300px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__links a {
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8FA8BC;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #FFFFFF;
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(143, 168, 188, 0.15);
+  font-size: 0.8125rem;
+  color: #8FA8BC;
+  opacity: 0.7;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .grid--3,
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav__links {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid rgba(111, 136, 160, 0.15);
+  }
+
+  .nav__links.open {
+    display: flex;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__tagline {
+    max-width: none;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
